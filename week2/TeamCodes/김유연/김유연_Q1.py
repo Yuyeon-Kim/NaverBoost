@@ -8,7 +8,7 @@
 # test score, mid : 50, final : 75
 
 class Score():
-    def __init__(self, mid : int, final : int):
+    def __init__(self, mid = int, final = int):
         self.__mid = mid
         self.__final = final
 
