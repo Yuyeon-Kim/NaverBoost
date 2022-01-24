@@ -13,3 +13,5 @@ class Score():
 
 score = Score(50, 75)
 print((score.mid + score.final) / 2)
+
+#수정수정
