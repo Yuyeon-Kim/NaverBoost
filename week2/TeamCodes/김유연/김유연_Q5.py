@@ -2,7 +2,7 @@
 
 # Q5. 이전에 구현한 클래스에서 merge_list의 함수 동작을 변경해야합니다. 단순합계가 아닌 평균을 구하는 함수로 변경해보세요.
 #  - 리스트의 데이터를 다루는 함수를 이용해서 구현해보세요.
-# - 최종 평균을 구한 후 오름차순으로 정렬해주세요.
+#  - 최종 평균을 구한 후 오름차순으로 정렬해주세요.
 
 class ReadCSV():
     def __init__(self, file_path):
@@ -10,13 +10,12 @@ class ReadCSV():
         self.__file_list = []
 
     def read_file(self):
-        if not self.__file_list: # if ile list is empty
+        if not self.__file_list: # if file list is empty
             with open(self.__file_path,"r") as my_file:
                 contents = my_file.read()
             self.__file_list = [list(map(int, l.split(','))) for l in contents.split("\n")]
         return self.__file_list
         
-    
     def merge_list(self):
         self.read_file()
         return sorted([sum(i)/len(i) for i in self.__file_list])
