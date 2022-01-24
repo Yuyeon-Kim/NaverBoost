@@ -10,13 +10,12 @@ class ReadCSV():
         self.__file_list = []
 
     def read_file(self):
-        if not self.__file_list: # if ile list is empty
+        if not self.__file_list: # if file list is empty
             with open(self.__file_path,"r") as my_file:
                 contents = my_file.read()
             self.__file_list = [list(map(int, l.split(','))) for l in contents.split("\n")]
         return self.__file_list
         
-    
     def merge_list(self):
         self.read_file()
         return [sum(i) for i in self.__file_list]
