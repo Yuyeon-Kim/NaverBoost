@@ -8,7 +8,6 @@ inputs = "cat32dog16cow"
 # (1, 4) (2, 5) (3, 6)
 
 def find_string(inputs: str):
-    # TODO
     res = [] # 결과 저장할 리스트
     temp_str="" # 끊기지 않은 스트링들 저장할 변수
     for s1, s2 in zip(inputs, inputs[1:]+"0"):

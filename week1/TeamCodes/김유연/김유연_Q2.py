@@ -5,7 +5,6 @@
 sentence = "way a is there will a is there where"
 
 def reverse_sentence(sentence):
-    # TODO
     return " ".join(reversed(sentence.split()))
 
 print(reverse_sentence(sentence))

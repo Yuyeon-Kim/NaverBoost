@@ -6,7 +6,6 @@
 num_list = [1, 5, 7, 15, 16, 22, 28, 29]
 
 def get_odd_num(num_list):
-    # TODO
     return list(filter(lambda x: x%2==1, num_list))
 
 print(get_odd_num(num_list))
