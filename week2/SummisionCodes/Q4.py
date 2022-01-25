@@ -13,7 +13,7 @@ class ReadCSV():
         if not self.__file_list: # 파일 리스트가 비어있어서 처음 파일을 읽는다면
             with open(self.__file_path,"r") as my_file: # 파일을 읽기모드로 열어서 my_file이라 별명붙임
                 contents = my_file.read()  # 파일의 모든 내용을 str 자료형으로 저장
-            self.__file_list = [list(map(int, l.split(','))) for l in contents.split("\n")] # 줄나눔을 기준으로 split 후 컴마(,) 기준으로 split 후 map 함수를 사용해 형변환
+            self.__file_list = [list(map(int, l.split(','))) for l in contents.split("\n")] # 줄바꿈을 기준으로 split 후 컴마(,) 기준으로 split 후 map 함수를 사용해 형변환
         return self.__file_list # __file_list return
         
     def merge_list(self):

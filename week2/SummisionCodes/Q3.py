@@ -6,7 +6,7 @@
 def read_file(file_path): # file_path 를 매개 변수로 받음
     with open(file_path,"r") as my_file: # 파일을 읽기모드로 열어서 my_file이라 별명붙임
         contents = my_file.read() # 파일의 모든 내용을 str 자료형으로 저장
-    return [l.split(',') for l in contents.split("\n")] # 줄나눔을 기준으로 split 후 컴마(,) 기준으로 split
+    return [l.split(',') for l in contents.split("\n")] # 줄바꿈을 기준으로 split 후 컴마(,) 기준으로 split
 
 # 파일의 경로를 file_path로 설정
 file_path = "./week2/data-01-test-score.csv"
