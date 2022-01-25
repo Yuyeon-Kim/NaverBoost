@@ -3,13 +3,12 @@
 # Q3. 이번 시험 결과에 대한 데이터를 학과 사무실에서 CSV파일로 전달해줬습니다. 우리는 이 파일을 이용해서 데이터 처리를 진행해야 합니다. 파일 입출력을 이용해 파일 데이터를 리스트로 만들어보세요.
 # - 파일 입출력에 사용하는 open 함수를 이용해 CSV 파일 내부의 데이터를 읽어보세요
 
-# 파일의 경로를 file_path로 설정
- 
 def read_file(file_path): # file_path 를 매개 변수로 받음
     with open(file_path,"r") as my_file: # 파일을 읽기모드로 열어서 my_file이라 별명붙임
         contents = my_file.read() # 파일의 모든 내용을 str 자료형으로 저장
     return [l.split(',') for l in contents.split("\n")] # 줄나눔을 기준으로 split 후 컴마(,) 기준으로 split
 
+# 파일의 경로를 file_path로 설정
 file_path = "./week2/data-01-test-score.csv"
 print(read_file(file_path))
 

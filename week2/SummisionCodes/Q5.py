@@ -19,7 +19,7 @@ class ReadCSV():
     def merge_list(self):
         return sorted([sum(i)/len(i) for i in self.read_file()]) # 각 행의 합계 / 원소 개수로 평균 구한 뒤 sorted 함수 사용해 오름차순 정렬
 
-
+# 파일의 경로를 file_path로 설정
 file_path = "./week2/data-01-test-score.csv"
 read_csv = ReadCSV(file_path)
 print(read_csv.merge_list())
